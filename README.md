@@ -13,8 +13,8 @@ API criada para auxiliar na organização e pesquisa de livros da biblioteca. El
 ### Pré-requisitos
 
 - Node.js instalado
-- Terminal ou VSCode
-- [Postman](https://www.postman.com/) (opcional, para testar requisições)
+- VSCode
+- Postman
 
 ---
 
