@@ -1,3 +1,5 @@
+const fs = require('fs');
+const path = require('path');
 const livros = require('../data/livros.json');
 const ordenarLivros = require('../utils/ordenarLivros');
 const Fuse = require('fuse.js');
@@ -11,11 +13,24 @@ const listarLivros = (req, res) => {
 
 const adicionarLivro = (req, res) => {
   const { titulo, autor } = req.body;
+
   if (!titulo || !autor) {
     return res.status(400).json({ erro: 'Título e autor são obrigatórios.' });
   }
-  listaLivros.push({ titulo, autor });
-  res.status(201).json({ mensagem: 'Livro adicionado com sucesso.' });
+
+  const novoLivro = { titulo, autor };
+  listaLivros.push(novoLivro);
+
+  const caminhoArquivo = path.join(__dirname, '../data/livros.json');
+
+  fs.writeFile(caminhoArquivo, JSON.stringify(listaLivros, null, 2), 'utf8', (err) => {
+    if (err) {
+      console.error('Erro ao salvar livro no arquivo:', err);
+      return res.status(500).json({ erro: 'Erro ao salvar livro.' });
+    }
+
+    res.status(201).json({ mensagem: 'Livro cadastrado com sucesso!!!' });
+  });
 };
 
 const buscarLivro = (req, res) => {
@@ -26,7 +41,7 @@ const buscarLivro = (req, res) => {
 
   const fuse = new Fuse(listaLivros, {
     keys: ['titulo'],
-    threshold: 0.4 // quanto menor, mais preciso
+    threshold: 0.4
   });
 
   const resultados = fuse.search(termo).map(result => result.item);
