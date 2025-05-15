@@ -1,50 +1,54 @@
 [
   {
-    "titulo": "O Código Da Vinci",
-    "autor": "Dan Brown"
-  },
-  {
-    "titulo": "Garota Exemplar",
-    "autor": "Gillian Flynn"
-  },
-  {
-    "titulo": "Como Fazer Amigos e Influenciar Pessoas",
-    "autor": "Dale Carnegie"
-  },
-  {
-    "titulo": "Orgulho e Preconceito",
-    "autor": "Jane Austen"
-  },
-  {
-    "titulo": "O Hobbit",
-    "autor": "J.R.R. Tolkien"
-  },
-  {
     "titulo": "A Culpa é das Estrelas",
     "autor": "John Green"
-  },
-  {
-    "titulo": "O Poder do Hábito",
-    "autor": "Charles Duhigg"
   },
   {
     "titulo": "A Sutil Arte de Ligar o F*da-se",
     "autor": "Mark Manson"
   },
   {
-    "titulo": "O Silêncio dos Inocentes",
-    "autor": "Thomas Harris"
+    "titulo": "Alex Rocha",
+    "autor": "Alex Rocha"
   },
   {
     "titulo": "As Aventuras de Huckleberry Finn",
     "autor": "Mark Twain"
   },
   {
-    "titulo": "Alex Rocha",
-    "autor": "Alex Rocha"
-  },
-  {
     "titulo": "Batman",
     "autor": "Arkham Knight – DarkSide"
+  },
+  {
+    "titulo": "Como Fazer Amigos e Influenciar Pessoas",
+    "autor": "Dale Carnegie"
+  },
+  {
+    "titulo": "Garota Exemplar",
+    "autor": "Gillian Flynn"
+  },
+  {
+    "titulo": "O Código Da Vinci",
+    "autor": "Dan Brown"
+  },
+  {
+    "titulo": "O Hobbit",
+    "autor": "J.R.R. Tolkien"
+  },
+  {
+    "titulo": "O Poder do Hábito",
+    "autor": "Charles Duhigg"
+  },
+  {
+    "titulo": "O Silêncio dos Inocentes",
+    "autor": "Thomas Harris"
+  },
+  {
+    "titulo": "Orgulho e Preconceito",
+    "autor": "Jane Austen"
+  },
+  {
+    "titulo": "Iron Man",
+    "autor": "DarkSide"
   }
 ]

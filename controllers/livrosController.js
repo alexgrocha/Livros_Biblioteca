@@ -53,4 +53,35 @@ const buscarLivro = (req, res) => {
   res.json(resultados);
 };
 
-module.exports = { listarLivros, adicionarLivro, buscarLivro };
+const deletarLivro = (req, res) => {
+  console.log('deletarLivro chamado com título:', req.params.titulo);
+
+  const titulo = req.params.titulo;
+
+  const index = listaLivros.findIndex(livro =>
+    livro.titulo.toLowerCase() === titulo.toLowerCase()
+  );
+
+  if (index === -1) {
+    return res.status(404).json({ mensagem: 'Livro não encontrado.' });
+  }
+
+  listaLivros.splice(index, 1);
+
+  const caminhoArquivo = path.join(__dirname, '../data/livros.json');
+  fs.writeFile(caminhoArquivo, JSON.stringify(listaLivros, null, 2), 'utf8', (err) => {
+    if (err) {
+      console.error('Erro ao deletar livro do arquivo:', err);
+      return res.status(500).json({ erro: 'Erro ao deletar livro.' });
+    }
+
+    res.json({ mensagem: 'Livro deletado com sucesso.' });
+  });
+};
+
+module.exports = {
+  listarLivros,
+  adicionarLivro,
+  buscarLivro,
+  deletarLivro
+};
