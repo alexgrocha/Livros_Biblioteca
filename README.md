@@ -22,6 +22,7 @@ API criada para auxiliar na organização e pesquisa de livros da biblioteca. El
 
 ```bash
 npm install
+npm install cors
 ```
 
 ---
