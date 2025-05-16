@@ -41,6 +41,17 @@ Base URL: `http://localhost:3000/api`
 
 ---
 
+### Coleção Postman
+
+Você pode testar todos os endpoints utilizando a coleção do Postman incluída neste projeto.
+
+**Como usar:**
+
+1. Abra o Postman.
+2. Vá em **File > Import** ou clique no botão **Import** no menu superior.
+3. Importe o arquivo `Desafio-Biblioteca.postman_collection.json`.
+4. Execute os endpoints conforme desejar.
+
 ### `GET /livros`
 
 Retorna todos os livros ordenados alfabeticamente por título.
